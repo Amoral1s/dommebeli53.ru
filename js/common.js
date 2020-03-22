@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+  //Каталог товаров при наведении
   if (jQuery(window).width() > 992) {
     jQuery('.header-center-wrap-left').hover(function(){
       jQuery(this).children('ul').slideDown(500);
@@ -17,8 +17,6 @@ $(document).ready(function () {
         jQuery('.header-top-mobile').removeClass('menu-active-toggle');
     });
   }
-  //Каталог товаров при наведении
-  
   //Внутреннее меню в каталоге товаров
   jQuery('.header-center-wrap-left li.menu-item-has-children').hover(function(){
     jQuery(this).children('ul').fadeIn(300);
@@ -60,6 +58,7 @@ $(document).ready(function () {
     $('.header-top-mobile').on('click', function () { 
       jQuery('.header-center-wrap-center').toggleClass('menu-active');
       jQuery('.header-center-wrap-right').toggleClass('menu-active');
+      jQuery('.header-center-wrap-left ul').slideUp('menu-active');
       if($('.header-top-mobile').hasClass('header-top-mobile-active')) {
         jQuery('.header-top-mobile').toggleClass('menu-active-toggle-fixed');
 
