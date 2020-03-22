@@ -1,5 +1,438 @@
 @import "reset"
+.button
+  display: flex
+  justify-content: center
+  align-items: center
+  color: #000
+  font-size: 18px
+  font-weight: 600
+  width: 192px
+  height: 40px
+  border-radius: 10px
+  background: linear-gradient(105.07deg, #F29D1B 0.66%, #FECE0E 100%)
+  box-shadow: 1px 1px 15px rgba(42, 42, 42, 0.3)
+  cursor: pointer
+  transition: 0.5s
+  &:hover
+    transform: scale(1.1)
+    transition: 0.5s
+    color: #fff
+.title
+  font-size: 24px
+  line-height: 29px
+  color: #2A2A2A
+  font-family: 'bold'
+  font-weight: 700
+.header
+  position: relative
+  &-bottom
+    z-index: 2
+    padding: 20px 0
+    ul
+      display: flex
+      align-items: center
+      justify-content: center
+      li
+        margin: 0 10px
+        a
+          font-size: 14px
+          font-weight: 600
+          font-family: 'reg2'
+          color: #000
+          transition: 0.5s
+          position: relative
+          &:after
+            position: absolute
+            height: 1px
+            width: 0%
+            transition: 0.5s
+            content: ''
+            bottom: -2px
+            left: 50%
+            transform: translateX(-50%)
+            background: $main
+          &:hover
+            transition: 0.5s
+            color: $light
+            &:after
+              width: 100%
+  &-center
+    background: linear-gradient(90deg, #F29D1B 0%, #FECE0E 100%)
+    position: absolute
+    display: flex
+    left: 50%
+    transform: translateX(-50%)
+    top: 100px
+    width: 100%
+    max-height: 50px
+    z-index: 10
+    &-wrap
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding-left: 0
+      padding-right: 0
+      &-right
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        &-social
+          display: flex
+          align-items: center
+          justify-content: flex-end
+          a
+            display: flex
+            justify-content: center
+            align-items: center
+            margin-left: 12px
+            transition: 0.5s
+            &:hover
+              transition: 0.5s
+              transform: scale(1.1)
+            img
+              height: 16px
+              width: 17px
+          a:first-child
+            img
+              width: 25px
+              height: 25px
+        &-search
+          margin-right: 25px
+          form
+            position: relative
+            label
+              span
+                display: none
+              input
+                border: none
+                border-radius: 10px
+                width: 280px
+                height: 30px
+                &::-webkit-search-cancel-button
+                  appearance: none
+            input.search-submit
+              position: absolute
+              right: 10px
+              top: 50%
+              transform: translateY(-50%)
+              font-size: 0
+              display: flex
+              border: none
+              background: transparent
+              height: 16px
+              width: 15px
+              padding: 0
+              border-radius: 50%
+              background-image: url(../img/icons/research.svg)
+              background-repeat: no-repeat
+              background-size: contain
+              background-position: center center
+              cursor: pointer
+              transition: 0.3s
+              &:hover
+                transition: 0.3s
+                transform: translateY(-50%) scale(1.2)
+      &-center
+        ul
+          display: flex
+          align-items: center
+          justify-content: center
+          li
+            display: flex
+            justify-content: center
+            align-items: center
+            margin: 0 10px
+            a
+              color: #000
+              font-family: 'reg2'
+              font-size: 14px
+              transition: 0.5s
+              position: relative
+              &:after
+                position: absolute
+                height: 1px
+                width: 0%
+                transition: 0.5s
+                content: ''
+                bottom: -2px
+                left: 50%
+                transform: translateX(-50%)
+                background-color: #fff
+              &:hover
+                transition: 0.5s
+                color: #fff
+                &:after
+                  width: 100%
+      &-left
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 50px
+        width: 240px
+        cursor: pointer
+        position: relative
+        background-color: rgba(255, 255, 255, 0.18)
+        transition: 0.5s
+        z-index: 50
+        &:hover
+          background-color: rgba(255, 255, 255, 0.58)
+          transition: 0.5s
+        div
+          display: flex
+          justify-content: center
+          align-items: center
+          font-size: 18px
+          font-family: 'reg2'
+          padding-left: 25px
+          position: relative
+          transition: 0.5s
+          cursor: pointer
+          &:after
+            position: absolute
+            content: ''
+            top: 50%
+            transform: translateY(-50%)
+            left: -10px
+            height: 24px
+            width: 24px
+            background-image: url(../img/icons/catalog.svg)
+            background-repeat: no-repeat
+            background-size: cover
+            
+        ul
+          position: absolute
+          display: none
+          top: 50px
+          background: $main
+          width: 100%
+          z-index: 50
+          padding-bottom: 10px
+          li
+            display: flex
+            justify-content: flex-start
+            align-items: flex-start
+            width: 100%
+            position: relative
+            a
+              display: flex
+              width: 100%
+              align-items: center
+              justify-content: flex-start
+              padding: 12px 0 12px 20px
+              font-size: 14px
+              color: #000
+              transition: 0.5s
+              font-family: 'reg2'
+              &:hover
+                transition: 0.5s
+                background-color: rgba(255, 255, 255, 0.58)
+            ul
+              display: none
+              position: absolute
+              left: 240px
+              top: 0
+              width: auto
+              padding-bottom: 0
+              li
+                a
+                  padding-right: 30px
+                  padding-left: 30px
+  &-top
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 20px 0
+    margin-bottom: 50px
+    &-right
+      display: flex
+      align-items: center
+      justify-content: flex-end
+      &-cart
+        a
+          position: relative
+          width: 40px
+          height: 40px
+          display: flex
+          justify-content: center
+          align-items: center
+          transition: 0.5s
+          &:hover
+            transition: 0.5s
+            transform: scale(1.1)
+          span
+            position: absolute
+            right: -5px
+            top: -6px
+            font-size: 13px
+            font-family: 'reg2'
+            background: $main
+            border-radius: 50%
+            display: flex
+            height: 23px
+            width: 23px
+            justify-content: center
+            align-items: center
+            color: #fff
+          img
+            height: 35px
+            width: 35px
+      &-phone
+        margin-right: 30px
+        a
+          font-size: 18px
+          color: $light
+          font-weight: 600
+          transition: 0.5s
+          &:hover
+            transition: 0.5s
+            color: #000
+        p
+          font-size: 14px
+          padding-left: 17px
+          font-family: 'reg2'
+          position: relative
+          padding-top: 3px
+          &:after
+            position: absolute
+            content: ''
+            height: 14px
+            width: 14px
+            left: 0
+            top: 55%
+            transform: translateY(-50%)
+            background-image: url(../img/icons/map.svg)
+            background-repeat: no-repeat
+            background-size: cover
+    &-center
+      ul
+        display: flex
+        justify-content: center
+        align-items: center
+        li
+          margin: 0 10px
+          display: flex
+          justify-content: center
+          align-items: center
+          a
+            font-size: 14px
+            color: #000
+            font-family: 'reg2'
+            transition: 0.5s
+            position: relative
+            &:after
+              position: absolute
+              height: 1px
+              width: 0%
+              transition: 0.5s
+              content: ''
+              bottom: -2px
+              left: 50%
+              transform: translateX(-50%)
+              background-color: $light
+            &:hover
+              transition: 0.5s
+              color: $light
+              &:after
+                width: 100%
 
+.offer
+  &-wrap
+    position: relative
+    overflow: hidden
+    height: 580px
+    width: 100%
+    max-width: 1100px
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    &-title
+      max-width: 350px
+      z-index: 10
+      h1
+        font-size: 24px
+        line-height: 29px
+        margin-bottom: 20px
+      p
+        font-size: 18px
+        font-weight: 600
+        margin-bottom: 40px
+    img
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      z-index: 1
+
+.catalog
+  padding-bottom: 30px
+  min-height: 500px
+  &-wrap
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    &-item
+      position: relative
+      margin-bottom: 25px
+      overflow: hidden
+      display: flex
+      justify-content: center
+      align-items: center
+      &-overlay
+        position: absolute
+        top: 0
+        left: -100%
+        width: 100%
+        height: 100%
+        background: rgba(0,0,0,0.4)
+        transition: 0.5s
+        z-index: 1
+      img
+        width: 100%
+        height: 100%
+      p
+        position: absolute
+        bottom: 40px
+        left: 0
+        background: $accent
+        font-weight: 700
+        padding: 10px 25px
+        color: #000
+        display: flex
+        justify-content: center
+        align-items: center
+        z-index: 5
+        transition: 1s
+        font-size: 18px
+      &:hover
+        p
+          transition: 1s
+          color: #fff
+          transform: translate(-50%, 50%)
+          bottom: 50%
+          left: 50%
+        div
+          left: 0
+    &-item:first-child
+      width: 47%
+    &-item:nth-child(2)
+      width: 24%
+    &-item:nth-child(3)
+      width: 24%
+    &-item:nth-child(4)
+      width: 24%
+    &-item:nth-child(5)
+      width: 47%
+    &-item:nth-child(6)
+      width: 24%
+.header-top-mobile
+  display: none
+.header-center-active
+  position: fixed
+  top: 0
+  z-index: 120
+  border-bottom: 1px solid #000
+ul.header-center-wrap-center-mobile-menu
+  display: none
 
 
 
