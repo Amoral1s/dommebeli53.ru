@@ -1,4 +1,67 @@
 @media (max-width: 440px)
+  .footer-bottom-wrap
+    &-right
+      .social
+        justify-content: center
+        a
+          margin: 0 5px
+      .phone
+        a
+          justify-content: center
+    &-left
+      display: flex
+      flex-direction: column
+      align-items: center
+    &-center
+      padding: 30px 0
+      width: 100%
+      flex-direction: column
+      align-items: flex-start
+      padding-bottom: 0
+      div
+        margin-bottom: 20px
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        ul
+          width: 100%
+          li
+            width: 100%
+            display: flex
+            justify-content: center
+   
+  .catalog
+    padding: 10px 20px 30px 20px
+    &-wrap
+      margin-top: 30px
+      position: relative
+      &-item
+        max-height: 200px
+        overflow: hidden
+        margin-bottom: 8px
+        img
+          width: 435px
+          height: 100%
+      &-item:first-child
+        width: 100%
+      &-item:nth-child(2)
+        width: 49%
+      &-item:nth-child(3)
+        width: 49%
+      &-item:nth-child(4)
+        width: 49%
+        img
+          height: 410px
+          width: auto
+      &-item:nth-child(5)
+        width: 100%
+      &-item:nth-child(6)
+        width: 49%
+        position: absolute
+        right: 0
+        bottom: 168px
   .header-center-wrap-center
     width: 320px
   .header-center-wrap-right

@@ -1,4 +1,31 @@
 @media(max-width: 768px)
+  .footer-top
+    img
+      display: none
+    form
+      width: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+  .footer-bottom-wrap
+    flex-direction: column-reverse
+    align-items: center
+    &-center
+      padding: 30px 0
+      width: 100%
+    &-left
+      width: 100%
+    &-right
+      width: 100%
+      justify-content: flex-start
+      .social
+        justify-content: flex-start
+        a
+          margin-right: 20px
+      .phone
+        a
+          justify-content: flex-start
   .header-top-right-cart
     position: absolute
     top: 111px
